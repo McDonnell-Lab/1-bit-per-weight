@@ -1,6 +1,8 @@
 # Training wide residual networks for deployment using a single bit for each weight
 
-This code was used for experiments accepted for publication in ICLR 2018 (iclr.cc). The ICLR version of the paper and the double-blind open peer review can be found at https://openreview.net/forum?id=rytNfI1AZ.
+Author: M. D. McDonnell
+
+This code was used for experiments accepted for publication in ICLR 2018 (iclr.cc). The ICLR version of the paper (download as a PDF file) and the double-blind open peer review can be found at https://openreview.net/forum?id=rytNfI1AZ.
 
 This page will be populated fully in coming days.
 
