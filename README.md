@@ -1,6 +1,7 @@
 # Training wide residual networks for deployment using a single bit for each weight
 
 Author: M. D. McDonnell
+
 Contact: mark.mcdonnell@unisa.edu.au
 
 This code was used for experiments accepted for publication in ICLR 2018 (iclr.cc). The ICLR version of the paper and the double-blind open peer review can be found at https://openreview.net/forum?id=rytNfI1AZ (download the PDF here: https://openreview.net/pdf?id=rytNfI1AZ ) 
