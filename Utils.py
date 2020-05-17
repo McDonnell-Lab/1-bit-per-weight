@@ -57,7 +57,7 @@ def GetDataGen(UseCutout):
         datagen = ImageDataGenerator(width_shift_range=4/32,
                                      height_shift_range=4/32,
                                      horizontal_flip=True,
-                                     fill_mode='nearest')
+                                     fill_mode='constant',cval=0)
         
     return datagen
 
