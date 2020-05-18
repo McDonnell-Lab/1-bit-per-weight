@@ -18,6 +18,7 @@ Versions include:
 
 Key results:
 
-<img src="Figures/Gap.png" data-canonical-src="Figures/Gap.png" width="250/>
-<img src="Figures/Summary.png" data-canonical-src="Figures/Summary.png" width="250/>
+![](Figures/Gap.png)
+
+![](Figures/Summary.png)
 
