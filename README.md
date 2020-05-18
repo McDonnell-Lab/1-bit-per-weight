@@ -16,3 +16,9 @@ Versions include:
 2. Matlab, using the matconvnet package (http://www.vlfeat.org/matconvnet/) 
 3. pytorch (coming)
 
+Key results:
+
+![](Figures/Gap.pdf)
+
+![](Figures/Summary.pdf)
+
