@@ -20,5 +20,5 @@ Key results:
 
 ![](Figures/Gap.pdf)
 
-![](Figures/Summary.pdf)
+![](Figures/Summary.png)
 
