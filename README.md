@@ -18,6 +18,8 @@ Versions include:
 
 Key results:
 
+Figure 1: Gap between 32 bit weights and 1 bit per weight CNNs:
+
 ![](Figures/Gap.png)
 
 ![](Figures/Summary.png)
