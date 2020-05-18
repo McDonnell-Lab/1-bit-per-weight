@@ -18,7 +18,7 @@ Versions include:
 
 Key results:
 
-![](Figures/Gap.pdf)
+![](Figures/Gap.png =250x)
 
-![](Figures/Summary.png)
+![](Figures/Summary.png =250x)
 
