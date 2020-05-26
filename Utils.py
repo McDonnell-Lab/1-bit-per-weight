@@ -31,7 +31,6 @@ def cutout(inputs,patch_size=18):
     Mask=inputs<0
     c = np.count_nonzero(Mask)
     inputs[Mask] = np.random.randint(0,256,c)
-    inputs = inputs/255.0
 
     return inputs
 
@@ -48,14 +47,14 @@ def GetDataGen(UseCutout):
 
     if UseCutout:
         datagen = ImageDataGenerator(preprocessing_function=cutout,
-                                     width_shift_range=4/32,
-                                     height_shift_range=4/32,
+                                     width_shift_range=5,#using 4/32  excludes 0 shift. But 5 shifts by -4,-3,-2,-1,0,1,2,3,4
+                                     height_shift_range=5,
                                      horizontal_flip=True,
                                      fill_mode='constant',cval=-1) #note my cutout function changes cval=-1 to random 
                                                                  #ints so cutout is needed for this bit
     else:
-        datagen = ImageDataGenerator(width_shift_range=4/32,
-                                     height_shift_range=4/32,
+        datagen = ImageDataGenerator(width_shift_range=5,
+                                     height_shift_range=5,
                                      horizontal_flip=True,
                                      fill_mode='constant',cval=0)
         
@@ -68,7 +67,7 @@ class LR_WarmRestart(tensorflow.keras.callbacks.Callback):
     '''I. Loshchilov and F. Hutter. SGDR: stochastic gradient descent with restarts.
     http://arxiv.org/abs/1608.03983.'''
     
-    def __init__(self,nbatch,initial_lr,min_lr,epochs_restart):
+    def __init__(self,nbatch,initial_lr,min_lr,epochs_restart,Tmult=0.0):
         self.initial_lr = initial_lr
         self.min_lr = min_lr
         self.nbatch = nbatch
@@ -76,12 +75,16 @@ class LR_WarmRestart(tensorflow.keras.callbacks.Callback):
         self.startEP=1.0
         self.ThisBatch = 0.0
         self.lr_used=[]
-        self.Tmult=0.0
+        self.Tmult=Tmult
         self.epochs_restart=epochs_restart
+        self.Init=False
         
     def on_epoch_begin(self, epoch, logs={}):
         self.currentEP = self.currentEP+1.0
         self.ThisBatch = 0.0
+        if self.Init==False:
+            K.set_value(self.model.optimizer.lr,self.initial_lr)
+            self.Init=True
         if np.isin(self.currentEP,self.epochs_restart):
             self.startEP=self.currentEP
             self.Tmult=self.currentEP+1.0
