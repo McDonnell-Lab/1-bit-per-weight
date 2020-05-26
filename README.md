@@ -6,6 +6,7 @@ This work was published in ICLR 2018 (iclr.cc). The ICLR version of the paper an
 
 The paper is also on arxiv: https://arxiv.org/abs/1802.08530
 
+
 # Single-bit-per-weight deep convolutional neural networks without batch-normalization layers for embedded systems
 
 Authors: Mark D. McDonnell, Hesham Mostafa, Runchun Wang, Andre van Schaik
@@ -14,11 +15,30 @@ This work was published at IEEE conferencs ACIRS 2019, held in Nagoya, Japan.
 
 The paper is also on arxiv: https://arxiv.org/abs/1907.06916
 
+---
+
 Contact: mark.mcdonnell@unisa.edu.au
 
 We provide in this repository code relevant to both papers that will enable the reader to verify our strong error rate results using a single-bit for each weight in inference, either when using batch normalisation layers, or replacing the combination of batch normalisation and ReLU with shifted ReLU.
 
 At this point we have only provided CIFAR 10 and CIFAR 100 examples. One day if we get time, we will add ImageNet.
+
+**Summay of Tensorflow.keras Results in this Repository **
+
+All results in this table are for 20-10 Wide Resdual Networks, with ~26 million parameters
+
+| Task      | Accuracy |
+| ----------- | ----------- |
+| CIFAR 10 Full Precision Baseline      | 96.62%       |
+| CIFAR 10 1-bit-per-weight with batch norms   | 96.25%        |
+| CIFAR 10 Full precision with shifted ReLU   | 95.66%        |
+| CIFAR 10 1-bit-per-weight shifted ReLU   | 96.52%        |
+| CIFAR 100 Full Precision Baseline      | 83.02%       |
+| CIFAR 100 1-bit-per-weight with batch norms   | 81.83%        |
+| CIFAR 100 Full precision with shifted ReLU   | 79.37%        |
+| CIFAR 100 1-bit-per-weight shifted ReLU   | 78.41%        |
+
+A noteable outcome is that for CIFAR 10, 1-bit-per-weight and shifted-ReLU is effictively as good as full precison with batch norm.
 
 Versions include: 
 
