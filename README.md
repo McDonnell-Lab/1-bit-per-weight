@@ -23,7 +23,7 @@ We provide in this repository code relevant to both papers that will enable the 
 
 At this point we have only provided CIFAR 10 and CIFAR 100 examples. One day if we get time, we will add ImageNet.
 
-**Summay of Tensorflow.keras Results in this Repository **
+**Summary of Tensorflow.keras Results in this Repository**
 
 All results in this table are for 20-10 Wide Resdual Networks, with ~26 million parameters
 
@@ -38,7 +38,7 @@ All results in this table are for 20-10 Wide Resdual Networks, with ~26 million 
 | CIFAR 100 Full precision with shifted ReLU   | 79.37%        |
 | CIFAR 100 1-bit-per-weight shifted ReLU   | 78.41%        |
 
-A noteable outcome is that for CIFAR 10, 1-bit-per-weight and shifted-ReLU is effictively as good as full precison with batch norm.
+A noteable outcome is that for CIFAR 10, 1-bit-per-weight and shifted-ReLU is effectively as good as full precison with batch norm.
 
 Versions include: 
 
