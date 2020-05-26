@@ -205,8 +205,8 @@ def resnet_layer_srelu(inputs,num_filters=16,kernel_size=3,strides=1,wd=1e-4,Use
     x = inputs
     if UseRelu:
         #shifted relu: y = max(-1,x)
-        #x=Lambda(lambda z: z + 1)(x)
-        x = ReLU()(x-1)
+        x=Lambda(lambda z: z + 1)(x)
+        x = ReLU()(x)
         x=Lambda(lambda z: z - 1)(x)
     if UseBinaryWeights:
         x = BinaryConv2D(num_filters,
