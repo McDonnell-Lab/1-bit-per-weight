@@ -6,6 +6,8 @@ This work was published in ICLR 2018 (iclr.cc). The ICLR version of the paper an
 
 The paper is also on arxiv: https://arxiv.org/abs/1802.08530
 
+Its also featured on paperswithcod.com:  https://paperswithcode.com/paper/training-wide-residual-networks-for
+
 
 # Single-bit-per-weight deep convolutional neural networks without batch-normalization layers for embedded systems
 
@@ -44,7 +46,7 @@ Versions include:
 
 1. tensorflow.keras (tensorflow 1.13, but also tested in tensorflow 2.1)
 2. Matlab, using the matconvnet package (http://www.vlfeat.org/matconvnet/) (not for shifted ReLU networks)
-3. pytorch (coming)
+3. pytorch (coming, but thanks @szagoruyko for re-implementation in pytorch: https://github.com/szagoruyko/binary-wide-resnet)
 
 Key results:
 
